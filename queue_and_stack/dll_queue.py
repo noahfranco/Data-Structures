@@ -6,7 +6,7 @@ from doubly_linked_list import DoublyLinkedList
 class Queue:
     def __init__(self):
         self.size = 0
-        
+
         self.storage = DoublyLinkedList()
 
     def enqueue(self, value):
@@ -25,4 +25,4 @@ class Queue:
         
 
     def len(self):
-        return self.size
+        return self.storage
