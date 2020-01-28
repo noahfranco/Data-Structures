@@ -17,12 +17,11 @@ class Queue:
 
     def dequeue(self):
         # make sure to check size before remove
-        if self.size < 0:
-            return None 
-        self.storage.remove_from_head()
-        self.size -= 1
-        
+        if self.storage.length < 1:
+            return None
+        else:
+            return self.storage.remove_from_head()
         
 
     def len(self):
-        return self.storage
+        return self.storage.length
