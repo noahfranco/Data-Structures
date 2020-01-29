@@ -92,7 +92,7 @@ class DoublyLinkedList:
         self.add_to_tail(value)
 
     def delete(self, node):
-               self.length -= 1
+        self.length -= 1
         # If LL is empty
         if not self.head and not self.tail:
             # TODO: Error handling
@@ -115,7 +115,7 @@ class DoublyLinkedList:
             
 
     def get_max(self):
-                if self.head is None:
+        if self.head is None:
             return None
         max_value = self.head.value
         current = self.head
