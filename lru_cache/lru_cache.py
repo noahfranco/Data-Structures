@@ -25,10 +25,10 @@ class LRUCache:
     key-value pair doesn't exist in the cache.
     """
     def get(self, key):
-        value = self.storage[key]
         if key in self.storage:
-             self.order.move_to_end(value)
-             return value
+            node = self.storage[key]
+            self.order.move_to_end(node)
+            return node.value[1]
         else: 
             return None 
 
@@ -43,15 +43,19 @@ class LRUCache:
     the newly-specified value.
     """
     def set(self, key, value):
+    # create a node if key not found and move to front 
+    # Move node to front if key found
+    # if full remove last node from linked list AND dictionary
+
         if key in self.storage:
             node = self.storage[key]
-            node.value = (key, value)
-            self.order.move_to_front(node)
-            return 
+            node.value = (key, value) 
+            self.order.move_to_end(node)
+            return
         if self.max == self.limit:
-            del self.storage(self.order.tail.value[0])
-            self.order.remove_from_tail()
+            del self.storage[self.order.head.value[0]]
+            self.order.remove_from_head()
             self.max -= 1
-        self.order.add_to_head((key, value))
-        self.storage[key] = self.order.head
-        self.size += 1
+        self.order.add_to_tail((key, value))
+        self.storage[key] = self.order.tail
+        self.max += 1
