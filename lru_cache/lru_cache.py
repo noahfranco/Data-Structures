@@ -47,8 +47,8 @@ class LRUCache:
     # Move node to front if key found
     # if full remove last node from linked list AND dictionary
 
-        if key in self.storage:
-            node = self.storage[key]
+        if key in self.storage: # check to see if key is in storage 
+            node = self.storage[key] # get key a store it in storage 
             node.value = (key, value) 
             self.order.move_to_end(node)
             return
