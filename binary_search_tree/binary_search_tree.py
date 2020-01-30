@@ -12,7 +12,21 @@ class BinarySearchTree:
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
+        # if new value is less then old value 
+        if value < self.value
+            # if left side is none 
+                # initialize left side to a binary tree
+            # else 
+                # insert new value on left side recursively
+                
+                # return 
+        # if new value is greater then old value 
+            # initialize right side to a brinary tree
+            # insert new value on right side
+            # return 
+
+        # self.left.insert(value) 
+        # self.left = BinarySearchTree(value)
 
     # Return True if the tree contains the value
     # False if it does not
