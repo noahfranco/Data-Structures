@@ -28,13 +28,22 @@ class BinarySearchTree:
         # self.left.insert(value) 
         # self.left = BinarySearchTree(value)
         pass
+    
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
-        # if value contains any nodes 
+        # *** First thing to do is to check if the right and left side of the tree have anything ***
+        # if value in self.left side of tree 
+            # initialize left side to a binary tree 
+            # return True 
+        #else:
+            #return False
+        # if value in self.right side of tree 
+            # initialize left side to a binary tree
+            # return True 
+        # else:
+            # return False
             
-            
-
         pass
 
     # Return the maximum value found in the tree
