@@ -27,10 +27,14 @@ class BinarySearchTree:
 
         # self.left.insert(value) 
         # self.left = BinarySearchTree(value)
-
+        pass
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
+        # if value contains any nodes 
+            
+            
+
         pass
 
     # Return the maximum value found in the tree
