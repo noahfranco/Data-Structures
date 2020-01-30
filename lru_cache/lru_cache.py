@@ -49,13 +49,13 @@ class LRUCache:
 
         if key in self.storage: # check to see if key is in storage 
             node = self.storage[key] # get key a store it in storage 
-            node.value = (key, value) 
-            self.order.move_to_end(node)
+            node.value = (key, value) # assign the value to a touple of key and value 
+            self.order.move_to_end(node) # removeing a tail node in the list beacuse we added and need to make space
             return
-        if self.max == self.limit:
-            del self.storage[self.order.head.value[0]]
-            self.order.remove_from_head()
-            self.max -= 1
-        self.order.add_to_tail((key, value))
-        self.storage[key] = self.order.tail
-        self.max += 1
+        if self.max == self.limit: # if the max is equal to the limit in the list
+            del self.storage[self.order.head.value[0]] # we want to delete the head value to make room
+            self.order.remove_from_head() # removing head 
+            self.max -= 1 # initializing deletion
+        self.order.add_to_tail((key, value)) # adding our key value tuple to the tail
+        self.storage[key] = self.order.tail # connecting our cache to the tail of our list
+        self.max += 1 #initializing added node
