@@ -106,11 +106,11 @@ class BinarySearchTree:
         # value = self.node
         # if self.left < self.right
             # if self.left:
-                # print(value)
+                # self.left.in_order_print(value)
             #else:
                 # return None
             # if self.right:
-                #print(value)
+                # self.left.in_order_print(value)
             #else:
                 # return None
         pass
@@ -118,7 +118,15 @@ class BinarySearchTree:
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
-        pass
+        #if self.left < self.right:
+            # if node in self.left:
+                # self.left.bft_print(node)
+            # else: 
+                # return None
+            #if node in self.right:
+                # self.right.bft_print(node)
+            # else: 
+                # return None 
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
